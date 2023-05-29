@@ -1,13 +1,14 @@
-const mongoose = require("mongoose");
+const moongose = require('mongoose');
 
-const GifItemSchema = new mongoose.Schema({
+const GifItemSchema = new moongose.Schema({
   item: {
     type: String,
-    required: true,
+    required: true
   },
   caption: {
-    type: String,
-  },
+    type: String
+  }
 });
 
-module.exports = mongoose.model("gif", GifItemSchema);
+//Exportamos el Schema
+module.exports = moongose.model('gif', GifItemSchema);
