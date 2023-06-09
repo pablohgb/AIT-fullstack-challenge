@@ -22,10 +22,8 @@ function App() {
   return (
     <div className="App">
       <h1>Gif Web in progress</h1>
-      <form>
-        <input type="text" placeholder="Add gif url"></input>
-        <button type="submit">Add Gif</button>
-      </form>
+      {/* <Link to='/addGif'>hola</Link> */}
+
       <div className="gifCards">
         {gifList?.map((gifIntput) => (
           <GifCard gif={gifIntput}></GifCard>
