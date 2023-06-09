@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 5500;
 
 app.use(cors());
 
-const GifItemRoute = require('./routes/gifRoutes');
-
+const GifItemRoute = require('./controllers/gif.controller');
+const UserRoute = require('./controllers/user.controller');
 moongose
   .connect(process.env.DB_URI)
   .then(() => console.log('Database Connected'))
   .catch((err) => console.log(err));
 
 app.use('/', GifItemRoute);
-
+app.use('/', UserRoute);
 app.listen(PORT, () => console.log('Server Connected'));

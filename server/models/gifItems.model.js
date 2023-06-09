@@ -1,3 +1,4 @@
+
 const moongose = require('mongoose');
 
 const GifItemSchema = new moongose.Schema({
@@ -7,8 +8,14 @@ const GifItemSchema = new moongose.Schema({
   },
   caption: {
     type: String
+  },
+  uploadedBy:{
+    type: String
+  },
+  uploadedById: {
+    type: String
   }
 });
 
 //Exportamos el Schema
-module.exports = moongose.model('gif', GifItemSchema);
+module.exports = moongose.model('Gif', GifItemSchema);
